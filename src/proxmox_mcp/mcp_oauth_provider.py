@@ -555,7 +555,8 @@ button{{width:100%;margin-top:18px;padding:12px 14px;border:0;border-radius:10px
                 "X-Frame-Options": "DENY",
                 "Content-Security-Policy": (
                     "default-src 'none'; style-src 'unsafe-inline'; "
-                    "form-action 'self'; base-uri 'none'; frame-ancestors 'none'"
+                    f"form-action 'self' {redirect_origin}; "
+                    "base-uri 'none'; frame-ancestors 'none'"
                 ),
             },
         )
